@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+table th {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
