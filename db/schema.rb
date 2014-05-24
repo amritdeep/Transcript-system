@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524154156) do
+ActiveRecord::Schema.define(version: 20140524161114) do
 
   create_table "courses", force: true do |t|
     t.string   "name"
@@ -21,6 +21,25 @@ ActiveRecord::Schema.define(version: 20140524154156) do
   end
 
   add_index "courses", ["user_id"], name: "index_courses_on_user_id"
+
+  create_table "seasons", force: true do |t|
+    t.string   "name",       default: "---\n- Winter\n- Fall\n- Spring\n"
+    t.integer  "course_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "seasons", ["course_id"], name: "index_seasons_on_course_id"
+
+  create_table "subjects", force: true do |t|
+    t.string   "name"
+    t.string   "grade"
+    t.integer  "season_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "subjects", ["season_id"], name: "index_subjects_on_season_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
