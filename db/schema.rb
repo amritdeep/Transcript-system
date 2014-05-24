@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140524161114) do
   add_index "courses", ["user_id"], name: "index_courses_on_user_id"
 
   create_table "seasons", force: true do |t|
-    t.string   "name",       default: "---\n- Winter\n- Fall\n- Spring\n"
+    t.string   "name"
     t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"

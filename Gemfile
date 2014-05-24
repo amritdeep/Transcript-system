@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 
 group :test, :development do
 	gem 'pry-rails'
+	gem 'seed_dump'
 end
 
 # Use ActiveModel has_secure_password
