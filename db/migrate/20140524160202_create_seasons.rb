@@ -1,7 +1,7 @@
 class CreateSeasons < ActiveRecord::Migration
   def change
     create_table :seasons do |t|
-      t.string :name, default: ["Winter", "Fall", "Spring"]
+      t.string :name
       t.references :course, index: true
 
       t.timestamps
