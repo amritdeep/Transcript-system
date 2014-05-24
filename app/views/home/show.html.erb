@@ -1,2 +1,20 @@
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
+<strong>Name: </strong>
+<%= @user.name %><br>	
+<strong>id: </strong>
+<%= @user.id %></br>
+<strong>GPA: </strong>
+<%= @user.gpa %><br>
+<strong>Major: </strong>
+<%= @course.name %><br>
+<% @seasons.each do |season| %>
+
+<table>
+	<th><%= season.name %></th>
+	<% season.subjects.each do |subject| %>
+		<tr>
+			<td><%= subject.name %></td>
+			<td><%= subject.grade %></td>
+		</tr>
+	<% end %>
+</table>
+<% end %>
