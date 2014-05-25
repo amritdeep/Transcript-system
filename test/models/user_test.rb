@@ -20,7 +20,8 @@ class UserTest < ActiveSupport::TestCase
   	@subject3 = Subject.create(name: "social", grade: 54.2)
   	@user.subjects = [@subject1, @subject2, @subject3]
   	@user.gpa_cal(@user.subjects)
-  	binding.pry	
+  	assert_equal(@user.gpa, 64.2)
+  	assert @user.save
   end
 
 end
