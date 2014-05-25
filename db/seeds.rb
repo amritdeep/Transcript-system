@@ -8,10 +8,10 @@ Season.create!([
   {name: "Spring", course_id: 1}
 ])
 Subject.create!([
-  {name: "Math 1A", grade: "A", season_id: nil},
-  {name: "Comp Sci 100", grade: "B", season_id: nil},
-  {name: "English", grade: "A+", season_id: nil},
-  {name: "History", grade: "A-", season_id: nil}
+  {name: "Math 1A", grade: 88.6, season_id: nil},
+  {name: "Comp Sci 100", grade: 52.0, season_id: nil},
+  {name: "English", grade: 42.67, season_id: nil},
+  {name: "History", grade: 17.0, season_id: nil}
 ])
 User.create!([
   {name: "amrit", gpa: nil},

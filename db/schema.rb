@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20140524161114) do
 
   create_table "subjects", force: true do |t|
     t.string   "name"
-    t.float   "grade"
+    t.float    "grade"
     t.integer  "season_id"
     t.datetime "created_at"
     t.datetime "updated_at"
