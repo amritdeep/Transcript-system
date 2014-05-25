@@ -35,11 +35,13 @@ ActiveRecord::Schema.define(version: 20140524161114) do
     t.string   "name"
     t.float    "grade"
     t.integer  "season_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "subjects", ["season_id"], name: "index_subjects_on_season_id"
+  add_index "subjects", ["user_id"], name: "index_subjects_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

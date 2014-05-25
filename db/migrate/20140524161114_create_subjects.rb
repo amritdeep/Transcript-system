@@ -4,6 +4,7 @@ class CreateSubjects < ActiveRecord::Migration
       t.string :name
       t.float :grade
       t.references :season, index: true
+      t.references :user, index: true
 
       t.timestamps
     end

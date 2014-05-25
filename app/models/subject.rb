@@ -1,5 +1,6 @@
 class Subject < ActiveRecord::Base
   belongs_to :season
+  belongs_to :user
 
 
   def grade_cal(grade)
