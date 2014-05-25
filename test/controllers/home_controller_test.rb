@@ -24,9 +24,9 @@ class HomeControllerTest < ActionController::TestCase
 
   	@course.seasons = [@winter, @fall, @spring]
 
-  	@com_sci1 = Subject.create(name: "Comp Sci 1A", grade: "A+")
-  	@mgm1 = Subject.create(name: "Management 1A", grade: "A")
-  	@math1 = Subject.create(name: "Math 1A", grade: "A-")
+  	@com_sci1 = Subject.create(name: "Comp Sci 1A", grade: )
+  	@mgm1 = Subject.create(name: "Management 1A", grade: )
+  	@math1 = Subject.create(name: "Math 1A", grade: )
 
   	@winter.subjects = [@com_sci1, @mgm1, @math1]
 
