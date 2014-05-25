@@ -5,11 +5,11 @@
 <strong>GPA: </strong>
 <%= @user.gpa %><br>
 <strong>Major: </strong>
-<%= @course.name %><br>
+<%#= @course.name %><br>
+<%= label_tag 'name', @course.name, class: "course" %>
 <% @seasons.each do |season| %>
-
 <table>
-	<th><%= season.name %></th>
+	<th class="heading"><%= season.name %></th>
 	<% season.subjects.each do |subject| %>
 		<tr>
 			<td><%= subject.name %></td>
